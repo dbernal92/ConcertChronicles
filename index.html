@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+    <style>
+        #myg:hover {
+            box-shadow: 0 0 50px orange;
+        }
+
+        #mts:hover {
+            box-shadow: 0 0 50px hotpink;
+        }
+
+        #jsw:hover {
+            box-shadow: 0 0 50px red;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -17,42 +30,32 @@
                 <div class="logo_container">
                     <img src="./assets/CC-logo.png" class="logo">
                 </div>
-                <!-- <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#outfits">Concert Outfits</a></li>
-                    <li><a href="#favorite">Favorite Concerts</a></li>
-                    <li><a href="#upcoming">Upcoming Concerts</a></li>
-                    <li><a href="#tips">Concert Tips</a></li>
-                    <li><a href="#prep">Prep 101</a></li>
-                </ul> -->
+                </ul>
                 <div class="links">
                     <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#outfits">Concert Outfits</a></li>
-                    <li><a href="#favorite">Favorite Concerts</a></li>
-                    <li><a href="#upcoming">Upcoming Concerts</a></li>
-                    <li><a href="#tips">Concert Tips</a></li>
-                    <li><a href="#prep">Prep 101</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Concert Outfits</a></li>
+                        <li><a href="./favorites.html">Favorite Concerts</a></li>
+                        <li><a href="#">Concert Tips</a></li>
+                        <li><a href="#">Prep 101</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
 
-            <!-- <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
-              </ul> -->
-
             <!-- Hero Section -->
-            <div class="hero_section">
-                <h1>Concert Chronicles</h1>
+            <div class="hero_section" id="header">
+                <div class="slide-in">
+                    <h1>Concert Chronicles</h1>
+                </div>
             </div>
         </header>
 
         <section class="main_content">
             <div class="section1">
                 <div class="introduction">
+                    <h2>Introduction</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dolore dolorem nobis,
                         quisquam laudantium accusantium ab est quaerat quasi necessitatibus iure eos quidem optio,
@@ -72,7 +75,7 @@
                     </div>
                     <div class="card">
                         <div class="img-container">
-                            <img src="./assets/CC-MTS.png" class="square-img" id="myg">
+                            <img src="./assets/CC-MTS.png" class="square-img" id="mts">
                         </div>
                         <div class="artist_info">
                             <h4><b>Megan Thee Stallion</b></h4>
@@ -81,7 +84,7 @@
                     </div>
                     <div class="card">
                         <div class="img-container">
-                            <img src="./assets/CC-JW.png" class="square-img" id="myg">
+                            <img src="./assets/CC-JW.png" class="square-img" id="jsw">
                         </div>
                         <div class="artist_info">
                             <h4><b>Jackson Wang</b></h4>
@@ -90,15 +93,62 @@
                     </div>
                 </div>
             </div>
+            <div class="section2">
+                <h3>Concert Tips</h3>
+                <!-- <div class="tips_container"> -->
+                    <div class="gallery">
+                        <a href="#"><div class="gallery-item">
+                            <img src="assets/CC-outfits.jpg" alt="Concert Outfits">
+                            <div class="gallery-text">Outfit Inspo</div>
+                        </div></a>
+                        <a href="#"><div class="gallery-item">
+                            <img src="assets/CC-savings.jpg" alt="Savings Tips">
+                            <div class="gallery-text">Savings Tips</div>
+                        </div></a>
+                        <a href="#"><div class="gallery-item">
+                            <img src="assets/CC-travel.jpg" alt="Travel Tips">
+                            <div class="gallery-text">Travel Tips</div>
+                        </div></a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </section>
+
+        <!-- Newsletter Sign Up Form -->
+        <form id="home_form">
+            <div class="container">
+                <div>
+                    <h4>Join our tribe!</h4>
+                    <p>Concert updates, tips, tricks, and more -- directly to your inbox</p>
+                </div>
+            </div>
+
+
+            <div class="container" style="background-color:white">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="text" placeholder="Email address" name="mail" required>
+                <div class="dropdown">
+                    <label for="email_frequency">Frequency:</label>
+                    <select name="email_times" id="email_times">
+                        <optgroup label="Frequency">
+                            <option value="weekly">Weekly</option>
+                            <option value="biweekly">Bi-weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <input type="submit" value="Submit">
+
+        </form>
     </div>
-    </div>
-    </section>
 
     <footer>
-        <!-- Footer content -->
+        <div class="footer_content">
+            <div class="copyright">
+                <p style="color: whitesmoke;" >Copyright 2024.<a href="mailto:dari@concertchronicles.com">dari@concertchronicles.com</a></p>
+            </div>
+        </div>
     </footer>
-    </div>
 </body>
-
 
 </html>
